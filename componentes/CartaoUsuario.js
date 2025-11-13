@@ -80,4 +80,23 @@ const estilos = StyleSheet.create({
         color: '#414141ff',
         textAlign: 'center',
     },
+    botao: {
+        marginTop: 15,
+        backgroundColor: '#5b82a8',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+        elevation: 5,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+    },
+
+    textoBotao: {
+        color: '#ffffff',
+        fontSize: 16,
+        fontWeight: 'bold',
+    },
+
 });
