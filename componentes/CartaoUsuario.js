@@ -1,8 +1,14 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity, Alert } from "react-native";
 import fotos from '../img/fotos';
 
-export default function CartãoUsuario({ nome, idade, rede_social,endereco,descricao, img }) {
+
+export default function CartãoUsuario({ nome, idade, rede_social, endereco, descricao, img }) {
+
+    const lidarComClique = () => {
+        Alert.alert("Ação do Botão", `Você clicou no perfil de ${nome}!`);
+    };
+
     return (
         <View style={estilos.cartao}>
             <Image source={fotos[img]} style={estilos.foto} />
@@ -10,7 +16,14 @@ export default function CartãoUsuario({ nome, idade, rede_social,endereco,descr
             <Text style={estilos.idade}>{idade}</Text>
             <Text style={estilos.rede_social}>{rede_social}</Text>
             <Text style={estilos.endereco}>{endereco}</Text>
-             <Text style={estilos.descricao}>{descricao}</Text>
+            <Text style={estilos.descricao}>{descricao}</Text>
+
+            <TouchableOpacity
+                style={estilos.botao}
+                onPress={lidarComClique}
+            >
+                <Text style={estilos.textoBotao}>Ver Perfil</Text>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -18,8 +31,9 @@ export default function CartãoUsuario({ nome, idade, rede_social,endereco,descr
 const estilos = StyleSheet.create({
     cartao: {
         backgroundColor: '#74f0f0ff',
-        padding: 50,
-        marginTop: 20,
+        padding: 30,
+        marginTop: -64,
+        margin: 86,
         borderRadius: 30,
         alignItems: 'center',
         shadowColor: '#b41616ff',
@@ -27,9 +41,9 @@ const estilos = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 5,
         elevation: 10,
-        width: 150,
-        margin: 15,
-    
+        width: 250,
+
+
     },
     foto: {
         width: 80,
