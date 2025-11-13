@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import fotos from '../img/fotos';
+import { createEntriesIterator } from "react-native/types_generated/src/private/webapis/utils/ArrayLikeUtils";
 
 export default function CartãoUsuario({ nome, idade, rede_social,endereco,descricao, img }) {
     return (
@@ -27,8 +28,8 @@ const estilos = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 5,
         elevation: 5,
-        width: 500,
-        height: 500,
+        width: 100,
+        height: 100,
         
     },
     foto: {
