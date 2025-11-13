@@ -18,16 +18,18 @@ export default function CartãoUsuario({ nome, idade, rede_social,endereco,descr
 const estilos = StyleSheet.create({
     cartao: {
         backgroundColor: '#74f0f0ff',
-        padding: 60,
-        marginTop: 15,
-        borderRadius: 10,
+        padding: 50,
+        marginTop: 20,
+        borderRadius: 30,
         alignItems: 'center',
         shadowColor: '#b41616ff',
         shadowOpacity: 0.9,
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 5,
-        elevation: 5,
+        elevation: 10,
         width: 150,
+        margin: 15,
+    
     },
     foto: {
         width: 80,
