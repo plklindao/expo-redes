@@ -80,6 +80,7 @@ const estilos = StyleSheet.create({
         color: '#414141ff',
         textAlign: 'center',
     },
+
     botao: {
         marginTop: 15,
         backgroundColor: '#5b82a8',
